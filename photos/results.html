@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Recon-ng Reconnaissance Report</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<script type="text/javascript">
+function showhide(id) {
+    obj = document.getElementById(id);
+    hide = document.getElementById("hide-" + id);
+    show = document.getElementById("show-" + id);
+    if (obj.style.display == "none") {
+        show.removeAttribute('style');
+        hide.removeAttribute('style');
+        obj.removeAttribute('style');
+    } else {
+        obj.style.display = "none";
+        hide.style.display = "none";
+        show.style.display = "inline";
+    }
+}
+function start() {
+    tables = document.getElementsByName("table");
+    for (i = 0; i < tables.length; ++i) {
+        showhide(tables[i].id);
+    }
+}
+</script>
+<style>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .75em;
+}
+.main {
+    width: 1000px;
+    padding: 0 10px;
+    /*text-align: center;*//*centers all the elements on the page*/
+    display: table;
+    margin: 0 auto;
+    border: 2px solid gray;
+    position: relative;
+}
+.title {
+    font-size: 3em;
+}
+.subtitle {
+    font-size: 2em;
+}
+.link {
+    font-size: 1em;
+    position: absolute;
+    right: 12px;
+    top: 5px;
+}
+p {
+    margin: 5px 7px 5px 7px;
+}
+table, div {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+.container {
+    display:inline-block;
+    text-align: left; /*left justifies the table caption*/
+    border: 2px solid gray;
+    margin: 0 0 10px 0;
+    width: 100%; /*expands tables all the way across*/
+}
+table {
+    border-spacing: 10px 5px;
+    margin: -5px auto 5px auto;
+    text-align: left;
+}
+th {
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+.leak {
+    margin: 10px 0;
+}
+a[id*="-"] {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.25em;
+}
+a[id*="show-"] {
+    display: none;
+}
+.footer {
+    text-align: center;
+}
+.centered {
+    text-align: center;
+}
+</style>
+</head>
+<body onload="start();">
+    <div class="main">
+        <div class='title'>College Website</div>
+        <div class='subtitle'>Recon-ng Reconnaissance Report</div>
+        <div class='link'><a href='http://www.recon-ng.com' target="_blank">www.recon-ng.com</a></div>
+        <hr>
+        <div>
+<!-- START -->
+<div class="container">
+<a id="show-summary" href="javascript:showhide('summary');"><p>[+] Summary</p></a>
+<a id="hide-summary" href="javascript:showhide('summary');"><p>[-] Summary</p><hr></a>
+<table id="summary">
+<tr><th>table</th><th>count</th></tr>
+<tr><td>domains</td><td class="centered">1</td></tr>
+<tr><td>companies</td><td class="centered">0</td></tr>
+<tr><td>netblocks</td><td class="centered">0</td></tr>
+<tr><td>locations</td><td class="centered">0</td></tr>
+<tr><td>vulnerabilities</td><td class="centered">0</td></tr>
+<tr><td>ports</td><td class="centered">0</td></tr>
+<tr><td>hosts</td><td class="centered">196</td></tr>
+<tr><td>contacts</td><td class="centered">1</td></tr>
+<tr><td>credentials</td><td class="centered">0</td></tr>
+<tr><td>leaks</td><td class="centered">0</td></tr>
+<tr><td>pushpins</td><td class="centered">0</td></tr>
+<tr><td>profiles</td><td class="centered">55</td></tr>
+<tr><td>repositories</td><td class="centered">0</td></tr>
+</table>
+</div><br />
+<div class="container">
+<a id="show-domains" href="javascript:showhide('domains');"><p>[+] Domains</p></a>
+<a id="hide-domains" href="javascript:showhide('domains');"><p>[-] Domains</p><hr></a>
+<table name="table" id="domains">
+<tr><th>domain</th><th>notes</th><th>module</th></tr>
+<tr><td>cabrillo.edu</td><td>College Website</td><td>user_defined</td></tr>
+</table>
+</div><br />
+<div class="container">
+<a id="show-hosts" href="javascript:showhide('hosts');"><p>[+] Hosts</p></a>
+<a id="hide-hosts" href="javascript:showhide('hosts');"><p>[-] Hosts</p><hr></a>
+<table name="table" id="hosts">
+<tr><th>host</th><th>ip_address</th><th>region</th><th>country</th><th>latitude</th><th>longitude</th><th>notes</th><th>module</th></tr>
+<tr><td>0-digitalcampus-swankmp-net.library.cabrillo.edu</td><td>207.62.185.148</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>0-digitalcampus.swankmp.net.library.cabrillo.edu</td><td>207.62.185.148</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>0-fod-infobase-com.library.cabrillo.edu</td><td>207.62.185.148</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>0-fod.infobase.com.library.cabrillo.edu</td><td>207.62.185.148</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>0-infotrac.galegroup.com.library.cabrillo.edu</td><td>207.62.185.148</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>0-library.artstor.org.library.cabrillo.edu</td><td>207.62.185.148</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>0-library.cqpress.com.library.cabrillo.edu</td><td>207.62.185.148</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>0-search-proquest-com.library.cabrillo.edu</td><td>207.62.185.148</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>0-search.ebscohost.com.library.cabrillo.edu</td><td>207.62.185.148</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>0-search.proquest.com.library.cabrillo.edu</td><td>207.62.185.148</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>0-www.artstor.org.library.cabrillo.edu</td><td>207.62.185.148</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>0-www.countrywatch.com.library.cabrillo.edu</td><td>207.62.185.148</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>0-www.credoreference.com.library.cabrillo.edu</td><td>207.62.185.148</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>0-www.oed.com.library.cabrillo.edu</td><td>207.62.185.148</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>0-www.randstatestats.org.library.cabrillo.edu</td><td>207.62.185.148</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>adrian.cis.cabrillo.edu</td><td>207.62.187.238</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>alacran.cabrillo.edu</td><td>207.62.187.12</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>andrea.cis.cabrillo.edu</td><td>207.62.187.237</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>appointments.cabrillo.edu</td><td>207.62.185.151</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>bayanew.cabrillo.edu</td><td>207.62.185.138</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>bb-auth-staff.cabrillo.edu</td><td>207.62.184.80</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>bb-auth-student.cabrillo.edu</td><td>207.62.184.82</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>bcntest.nat.cabrillo.edu</td><td>207.62.187.35</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>boris.cabrillo.edu</td><td>207.62.185.140</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>borracho.cabrillo.edu</td><td>207.62.185.145</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>brain.cabrillo.edu</td><td>207.62.185.197</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>butane.cabrillo.edu</td><td>207.62.186.7</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>cabrillo-production.netlify.app</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>cabrillo.edu</td><td>104.198.14.52</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>cenic-ds3-gw.cabrillo.edu</td><td>207.62.184.1</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>cenic-egm-gw.cabrillo.edu</td><td>207.62.184.4</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>cis-gw.cabrillo.edu</td><td>207.62.187.222</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>cloud1.bayict.cabrillo.edu</td><td>12.215.6.133</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>cloud2.bayict.cabrillo.edu</td><td>12.215.6.136</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>cmap.cabrillo.edu</td><td>207.62.185.21</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>coe-oasis.cabrillo.edu</td><td>207.62.184.35</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>com.library.cabrillo.edu</td><td>207.62.185.148</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>content.cabrillo.edu</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>content.cabrillo.edu</td><td>52.87.231.72</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>correo.cabrillo.edu</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>correo.cabrillo.edu</td><td>207.62.185.140</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>credentials.cabrillo.edu</td><td>207.62.184.32</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>dattias-ext.cabrillo.edu</td><td>207.62.184.95</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>dbscan.cabrillo.edu</td><td>207.62.185.158</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>directory.cabrillo.edu</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>directory.cabrillo.edu</td><td>207.62.185.140</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>dns.cabrillo.edu</td><td>207.62.184.53</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>dns2.cabrillo.edu</td><td>207.62.184.153</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>docs.cabrillo.edu</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>docs.cabrillo.edu</td><td>216.58.195.83</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>donkey.cabrillo.edu</td><td>207.62.185.156</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>ed.cis.cabrillo.edu</td><td>207.62.187.234</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>edward.cabrillo.edu</td><td>207.62.185.154</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>elliot.cis.cabrillo.edu</td><td>207.62.187.239</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>expe1.cabrillo.edu</td><td>207.62.185.136</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>garza.cabrillo.edu</td><td>207.62.185.192</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>ghs.google.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>go.cabrillo.edu</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>go.cabrillo.edu</td><td>216.58.195.83</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>hawknet-wireless-gw-ext.cabrillo.edu</td><td>207.62.184.20</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>hawknet-wireless-gw.cabrillo.edu</td><td>1.1.1.1</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>iam.cabrillo.edu</td><td>207.62.185.153</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>infoserv.cabrillo.edu</td><td>207.62.187.50</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>it.cabrillo.edu</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>it.cabrillo.edu</td><td>216.58.195.83</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>itlabs1.bayict.cabrillo.edu</td><td>12.215.6.135</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>itlabs2.bayict.cabrillo.edu</td><td>12.215.6.138</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>james.cabrillo.edu</td><td>207.62.185.155</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>jeff.cis.cabrillo.edu</td><td>207.62.187.233</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>joe.cabrillo.edu</td><td>207.62.185.131</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>jupyter.cis.cabrillo.edu</td><td>207.62.187.230</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>lharbottle.cis.cabrillo.edu</td><td>207.62.187.236</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>lhedin-ext.cabrillo.edu</td><td>207.62.184.96</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>library.cabrillo.edu</td><td>207.62.185.148</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>lola.cabrillo.edu</td><td>207.62.184.53</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>machavez.cis.cabrillo.edu</td><td>207.62.187.235</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>mail-internal.cabrillo.edu</td><td>207.62.184.140</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>mail.cabrillo.edu</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mail.cabrillo.edu</td><td>207.62.185.140</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>michelangelo.cabrillo.edu</td><td>10.115.120.53</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>mobile.cabrillo.edu</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>mobile.cabrillo.edu</td><td>207.62.185.133</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>movies.cabrillo.edu</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>movies.cabrillo.edu</td><td>207.62.185.140</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>my.cabrillo.edu</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>my.cabrillo.edu</td><td>207.62.185.171</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>nat-bms.cabrillo.edu</td><td>207.62.184.28</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>nat-opentable.cabrillo.edu</td><td>207.62.184.181</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>ncx-rapid7.cabrillo.edu</td><td>207.62.184.8</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>nessus.cabrillo.edu</td><td>207.62.184.94</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>net.library.cabrillo.edu</td><td>207.62.185.148</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>netlab.bayict.cabrillo.edu</td><td>104.238.102.176</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>ns1.cis.cabrillo.edu</td><td>207.62.187.252</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>ns2.cis.cabrillo.edu</td><td>207.62.187.253</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>openlab.bayict.cabrillo.edu</td><td>12.215.6.140</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>opus.cis.cabrillo.edu</td><td>207.62.187.228</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>org.library.cabrillo.edu</td><td>207.62.185.148</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pajaro.cabrillo.edu</td><td>207.62.185.133</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-delta.cabrillo.edu</td><td>207.62.184.33</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-inst-100.cabrillo.edu</td><td>207.62.184.100</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-inst-1000.cabrillo.edu</td><td>207.62.184.112</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-inst-1050.cabrillo.edu</td><td>207.62.184.113</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-inst-1100.cabrillo.edu</td><td>207.62.184.114</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-inst-1200.cabrillo.edu</td><td>207.62.184.115</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-inst-1300.cabrillo.edu</td><td>207.62.184.116</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-inst-1400.cabrillo.edu</td><td>207.62.184.117</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-inst-1500.cabrillo.edu</td><td>207.62.184.118</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-inst-1550.cabrillo.edu</td><td>207.62.184.119</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-inst-1600.cabrillo.edu</td><td>207.62.184.120</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-inst-1800.cabrillo.edu</td><td>207.62.184.121</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-inst-1900.cabrillo.edu</td><td>207.62.184.122</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-inst-200.cabrillo.edu</td><td>207.62.184.101</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-inst-2000.cabrillo.edu</td><td>207.62.184.123</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-inst-2100.cabrillo.edu</td><td>207.62.184.124</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-inst-2200.cabrillo.edu</td><td>207.62.184.102</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-inst-2500.cabrillo.edu</td><td>207.62.184.126</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-inst-300.cabrillo.edu</td><td>207.62.184.103</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-inst-350.cabrillo.edu</td><td>207.62.184.104</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-inst-400.cabrillo.edu</td><td>207.62.184.105</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-inst-450.cabrillo.edu</td><td>207.62.184.106</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-inst-500.cabrillo.edu</td><td>207.62.184.107</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-inst-5000.cabrillo.edu</td><td>207.62.184.127</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-inst-600.cabrillo.edu</td><td>207.62.184.108</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-inst-700.cabrillo.edu</td><td>207.62.184.109</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-inst-800.cabrillo.edu</td><td>207.62.184.110</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-inst-900.cabrillo.edu</td><td>207.62.184.111</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-inst-br1.cabrillo.edu</td><td>207.62.184.130</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-inst-br2.cabrillo.edu</td><td>207.62.184.131</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-inst-br3.cabrillo.edu</td><td>207.62.184.132</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-inst-gtc.cabrillo.edu</td><td>207.62.184.134</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-inst-po.cabrillo.edu</td><td>207.62.184.133</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-pvae-usd.cabrillo.edu</td><td>207.62.184.244</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-staff-100.cabrillo.edu</td><td>207.62.184.200</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-staff-1000.cabrillo.edu</td><td>207.62.184.212</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-staff-1050.cabrillo.edu</td><td>207.62.184.213</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-staff-1100.cabrillo.edu</td><td>207.62.184.214</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-staff-1200.cabrillo.edu</td><td>207.62.184.215</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-staff-1300.cabrillo.edu</td><td>207.62.184.216</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-staff-1400.cabrillo.edu</td><td>207.62.184.217</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-staff-1500.cabrillo.edu</td><td>207.62.184.218</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-staff-1550.cabrillo.edu</td><td>207.62.184.219</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-staff-1600.cabrillo.edu</td><td>207.62.184.220</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-staff-1800.cabrillo.edu</td><td>207.62.184.221</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-staff-1900.cabrillo.edu</td><td>207.62.184.222</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-staff-200.cabrillo.edu</td><td>207.62.184.201</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-staff-2000.cabrillo.edu</td><td>207.62.184.223</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-staff-2100.cabrillo.edu</td><td>207.62.184.224</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-staff-2200.cabrillo.edu</td><td>207.62.184.202</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-staff-2300.cabrillo.edu</td><td>207.62.184.228</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-staff-2400.cabrillo.edu</td><td>207.62.184.225</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-staff-2500.cabrillo.edu</td><td>207.62.184.226</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-staff-300.cabrillo.edu</td><td>207.62.184.203</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-staff-350.cabrillo.edu</td><td>207.62.184.204</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-staff-400.cabrillo.edu</td><td>207.62.184.205</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-staff-450.cabrillo.edu</td><td>207.62.184.206</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-staff-500.cabrillo.edu</td><td>207.62.184.207</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-staff-600.cabrillo.edu</td><td>207.62.184.208</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-staff-650.cabrillo.edu</td><td>207.62.184.227</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-staff-700.cabrillo.edu</td><td>207.62.184.209</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-staff-800.cabrillo.edu</td><td>207.62.184.210</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-staff-900.cabrillo.edu</td><td>207.62.184.211</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-staff-br1.cabrillo.edu</td><td>207.62.184.230</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-staff-br2.cabrillo.edu</td><td>207.62.184.231</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-staff-br3.cabrillo.edu</td><td>207.62.184.232</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-staff-gtc.cabrillo.edu</td><td>207.62.184.234</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-staff-itsrvrs.cabrillo.edu</td><td>207.62.184.179</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pat-staff-po.cabrillo.edu</td><td>207.62.184.233</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>paytest.cabrillo.edu</td><td>207.62.185.194</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pengo.cis.cabrillo.edu</td><td>207.62.187.229</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pera.cabrillo.edu</td><td>207.62.185.147</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pgadaptor-test.cabrillo.edu</td><td>207.62.187.17</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pgadaptor.cabrillo.edu</td><td>207.62.187.16</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>pop.cabrillo.edu</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>pop.cabrillo.edu</td><td>207.62.185.140</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>rad.bayict.cabrillo.edu</td><td>12.215.6.139</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>reset.cabrillo.edu</td><td>207.62.187.3</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>richie.cabrillo.edu</td><td>207.62.185.193</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>savalet-r18.cabrillo.edu</td><td>207.62.185.218</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>security1.bayict.cabrillo.edu</td><td>12.215.6.134</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>security2.bayict.cabrillo.edu</td><td>12.215.6.137</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>sirena.cabrillo.edu</td><td>207.62.187.42</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>sso2.cabrillo.edu</td><td>207.62.185.171</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>tickets.bayict.cabrillo.edu</td><td>12.215.6.130</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>tobias.cabrillo.edu</td><td>207.62.185.225</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>valiente.cabrillo.edu</td><td>207.62.187.243</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>vdi-staff-pat.cabrillo.edu</td><td>207.62.184.66</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>vdi-student-pat.cabrillo.edu</td><td>207.62.184.44</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>vpn.cabrillo.edu</td><td>207.62.184.2</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>vpn.cis.cabrillo.edu</td><td>207.62.187.226</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>vpn2.cabrillo.edu</td><td>207.62.184.12</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+<tr><td>wp-cabrillo.frb.io</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>wp-cabrillo.us1.frbit.net</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>www.cabrillo.edu</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>www.cabrillo.edu</td><td>138.68.50.15</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>www.cabrillo.edu</td><td>138.197.214.0</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>www.library.cabrillo.edu</td><td>207.62.185.148</td><td></td><td></td><td></td><td></td><td></td><td>hackertarget</td></tr>
+</table>
+</div><br />
+<div class="container">
+<a id="show-contacts" href="javascript:showhide('contacts');"><p>[+] Contacts</p></a>
+<a id="hide-contacts" href="javascript:showhide('contacts');"><p>[-] Contacts</p><hr></a>
+<table name="table" id="contacts">
+<tr><th>first_name</th><th>middle_name</th><th>last_name</th><th>email</th><th>title</th><th>region</th><th>country</th><th>phone</th><th>notes</th><th>module</th></tr>
+<tr><td>Michael</td><td></td><td>MAtera</td><td>mmatera@cabrillo.edu</td><td>Whois contact</td><td>Aptos, CA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+</table>
+</div><br />
+<div class="container">
+<a id="show-profiles" href="javascript:showhide('profiles');"><p>[+] Profiles</p></a>
+<a id="hide-profiles" href="javascript:showhide('profiles');"><p>[-] Profiles</p><hr></a>
+<table name="table" id="profiles">
+<tr><th>username</th><th>resource</th><th>url</th><th>category</th><th>notes</th><th>module</th></tr>
+<tr><td>irvin</td><td>Aminoapps</td><td>https://aminoapps.com/u/irvin</td><td>blog</td><td></td><td>profiler</td></tr>
+<tr><td>irvin</td><td>Audiojungle</td><td>https://audiojungle.net/user/irvin</td><td>music</td><td></td><td>profiler</td></tr>
+<tr><td>irvin</td><td>Avid Community</td><td>https://community.avid.com/members/irvin/default.aspx</td><td>music</td><td></td><td>profiler</td></tr>
+<tr><td>irvin</td><td>BiggerPockets</td><td>https://www.biggerpockets.com/users/irvin</td><td>finance</td><td></td><td>profiler</td></tr>
+<tr><td>irvin</td><td>Cloudflare</td><td>https://community.cloudflare.com/u/irvin</td><td>tech</td><td></td><td>profiler</td></tr>
+<tr><td>irvin</td><td>buymeacoffee</td><td>https://www.buymeacoffee.com/irvin</td><td>finance</td><td></td><td>profiler</td></tr>
+<tr><td>irvin</td><td>Ameblo</td><td>https://ameblo.jp/irvin</td><td>blog</td><td></td><td>profiler</td></tr>
+<tr><td>irvin</td><td>Bookcrossing</td><td>https://www.bookcrossing.com/mybookshelf/irvin</td><td>hobby</td><td></td><td>profiler</td></tr>
+<tr><td>irvin</td><td>cnet</td><td>https://www.cnet.com/profiles/irvin/</td><td>news</td><td></td><td>profiler</td></tr>
+<tr><td>irvin</td><td>Designspriation</td><td>https://www.designspiration.com/irvin/</td><td>art</td><td></td><td>profiler</td></tr>
+<tr><td>irvin</td><td>championat</td><td>https://www.championat.com/user/irvin/</td><td>news</td><td></td><td>profiler</td></tr>
+<tr><td>irvin</td><td>Cytoid</td><td>https://cytoid.io/profile/irvin</td><td>gaming</td><td></td><td>profiler</td></tr>
+<tr><td>irvin</td><td>Gab</td><td>https://gab.com/api/v1/account_by_username/irvin</td><td>political</td><td></td><td>profiler</td></tr>
+<tr><td>irvin</td><td>Duolingo</td><td>https://www.duolingo.com/2017-06-30/users?username=irvin&amp;_=1628308619574</td><td>hobby</td><td></td><td>profiler</td></tr>
+<tr><td>irvin</td><td>issuu</td><td>https://issuu.com/irvin</td><td>shopping</td><td></td><td>profiler</td></tr>
+<tr><td>irvin</td><td>Ello.co</td><td>https://ello.co/irvin</td><td>art</td><td></td><td>profiler</td></tr>
+<tr><td>irvin</td><td>JSFiddle</td><td>https://jsfiddle.net/user/irvin/</td><td>coding</td><td></td><td>profiler</td></tr>
+<tr><td>irvin</td><td>Eyeem</td><td>https://www.eyeem.com/u/irvin</td><td>art</td><td></td><td>profiler</td></tr>
+<tr><td>irvin</td><td>Dating.ru</td><td>https://dating.ru/irvin/</td><td>dating</td><td></td><td>profiler</td></tr>
+<tr><td>irvin</td><td>Kickstarter</td><td>https://www.kickstarter.com/profile/irvin</td><td>shopping</td><td></td><td>profiler</td></tr>
+<tr><td>irvin</td><td>MyAnimeList</td><td>https://myanimelist.net/profile/irvin</td><td>social</td><td></td><td>profiler</td></tr>
+<tr><td>irvin</td><td>mastodon</td><td>https://mastodon.social/@irvin</td><td>social</td><td></td><td>profiler</td></tr>
+<tr><td>irvin</td><td>Pokerstrategy</td><td>http://www.pokerstrategy.net/user/irvin/profile/</td><td>gaming</td><td></td><td>profiler</td></tr>
+<tr><td>irvin</td><td>redbubble</td><td>https://www.redbubble.com/people/irvin/shop?ref=artist_title_name%2F</td><td>shopping</td><td></td><td>profiler</td></tr>
+<tr><td>irvin</td><td>steemit</td><td>https://steemit.com/@irvin</td><td>social</td><td></td><td>profiler</td></tr>
+<tr><td>irvin</td><td>themeforest</td><td>https://themeforest.net/user/irvin</td><td>art</td><td></td><td>profiler</td></tr>
+<tr><td>irvin</td><td>vsco</td><td>https://vsco.co/irvin/gallery</td><td>social</td><td></td><td>profiler</td></tr>
+<tr><td>irvin</td><td>about.me</td><td>https://about.me/irvin</td><td>social</td><td></td><td>profiler</td></tr>
+<tr><td>irvin</td><td>Wowhead</td><td>https://www.wowhead.com/user=irvin</td><td>gaming</td><td></td><td>profiler</td></tr>
+<tr><td>irvin</td><td>unsplash</td><td>https://unsplash.com/@irvin</td><td>images</td><td></td><td>profiler</td></tr>
+<tr><td>irvin</td><td>authorSTREAM</td><td>http://www.authorstream.com/irvin/</td><td>social</td><td></td><td>profiler</td></tr>
+<tr><td>irvin</td><td>Linktree</td><td>https://linktr.ee/irvin</td><td>social</td><td></td><td>profiler</td></tr>
+<tr><td>irvin</td><td>Bandlab</td><td>https://www.bandlab.com/api/v1.3/users/irvin</td><td>music</td><td></td><td>profiler</td></tr>
+<tr><td>irvin</td><td>Blogspot</td><td>http://irvin.blogspot.com</td><td>blog</td><td></td><td>profiler</td></tr>
+<tr><td>irvin</td><td>Bandcamp</td><td>https://bandcamp.com/irvin</td><td>music</td><td></td><td>profiler</td></tr>
+<tr><td>irvin</td><td>BodyBuilding.com</td><td>http://api.bodybuilding.com/api-proxy/bbc/get?slug=irvin</td><td>health</td><td></td><td>profiler</td></tr>
+<tr><td>irvin</td><td>Behance</td><td>https://www.behance.net/irvin</td><td>business</td><td></td><td>profiler</td></tr>
+<tr><td>irvin</td><td>ask.fm</td><td>https://ask.fm/irvin</td><td>social</td><td></td><td>profiler</td></tr>
+<tr><td>irvin</td><td>Chess.com</td><td>https://www.chess.com/member/irvin</td><td>gaming</td><td></td><td>profiler</td></tr>
+<tr><td>irvin</td><td>cHEEZburger</td><td>https://profile.cheezburger.com/irvin</td><td>hobby</td><td></td><td>profiler</td></tr>
+<tr><td>irvin</td><td>Discogs</td><td>https://www.discogs.com/user/irvin</td><td>music</td><td></td><td>profiler</td></tr>
+<tr><td>irvin</td><td>codementor</td><td>https://www.codementor.io/@irvin</td><td>coding</td><td></td><td>profiler</td></tr>
+<tr><td>irvin</td><td>Disqus</td><td>https://disqus.com/by/irvin/</td><td>social</td><td></td><td>profiler</td></tr>
+<tr><td>irvin</td><td>DockerHub</td><td>https://hub.docker.com/v2/users/irvin/</td><td>coding</td><td></td><td>profiler</td></tr>
+<tr><td>irvin</td><td>eBay</td><td>https://www.ebay.com/usr/irvin</td><td>shopping</td><td></td><td>profiler</td></tr>
+<tr><td>irvin</td><td>Elftown</td><td>http://elftown.com/irvin</td><td>social</td><td></td><td>profiler</td></tr>
+<tr><td>irvin</td><td>Etsy</td><td>https://www.etsy.com/people/irvin</td><td>shopping</td><td></td><td>profiler</td></tr>
+<tr><td>irvin</td><td>F3</td><td>https://f3.cool/irvin</td><td>social</td><td></td><td>profiler</td></tr>
+<tr><td>irvin</td><td>fanpop</td><td>https://www.fanpop.com/fans/irvin</td><td>social</td><td></td><td>profiler</td></tr>
+<tr><td>irvin</td><td>Fodors Forum</td><td>https://www.fodors.com/community/profile/irvin/forum-activity</td><td>social</td><td></td><td>profiler</td></tr>
+<tr><td>irvin</td><td>Flickr</td><td>https://www.flickr.com/photos/irvin/</td><td>images</td><td></td><td>profiler</td></tr>
+<tr><td>irvin</td><td>freelancer</td><td>https://www.freelancer.com/u/irvin</td><td>business</td><td></td><td>profiler</td></tr>
+<tr><td>irvin</td><td>freesound</td><td>https://freesound.org/people/irvin/</td><td>music</td><td></td><td>profiler</td></tr>
+<tr><td>irvin</td><td>Bitbucket</td><td>https://bitbucket.org/irvin/</td><td>coding</td><td></td><td>profiler</td></tr>
+<tr><td>irvin</td><td>DeviantArt</td><td>https://www.deviantart.com/irvin</td><td>images</td><td></td><td>profiler</td></tr>
+</table>
+</div><br />
+
+<!-- END -->
+        </div>
+        <hr>
+        <p class="footer">Created by: TheOpBro<br />Tue, Dec 07 2021 07:04:53</p>
+    </div>
+</body>
+</html>
